@@ -1,0 +1,18 @@
+<persistence xmlns="https://jakarta.ee/xml/ns/persistence" version="3.0">
+    <persistence-unit name="testDB">
+        
+        <properties>
+       <!--     Mapp to driver class-->
+            <property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver"/>
+        <!--Jdbc COnnectioin url-->
+            <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/test"/>
+      <!--DB username-->
+       <property name="javax.persistence.jdbc.user" value="root"/>
+            <!--DB password-->
+<property name="javax.persistence.jdbc.password" value="rootuser"/>
+            <!--Hibernate mapping-->
+            <property name="hibernate.dialect" value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>
