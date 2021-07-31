@@ -1,30 +1,80 @@
 package com.hmp.JerseyDemoRest.Bean;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "usertest")
 public class User {
-    private String name;
-    private int id;
+    @Id
+    @Column(name = "id")
+    private int idNo;
+    @Column(name = "user_name")
+    private String userName;
+    @Column(name = "last_name")
+    private String lastName;
 
-    public String getName() {
-        return name;
+    @Column(name = "first_name")
+    private String firstName;
+    @Column(name = "email")
+    private String email;
+    @Column(name = "gender")
+    private String gender;
+
+    public int getIdNo() {
+        return idNo;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setIdNo(int idNo) {
+        this.idNo = idNo;
+    }
+    public String getFirstName() {
+        return firstName;
+    }
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+    public String getUserName() {
+        return userName;
+    }
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
-    public int getId() {
-        return id;
+    public String getLastName() {
+        return lastName;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "name='" + name + '\'' +
-                ", id=" + id +
+                "id=" + idNo +
+                ", userName='" + userName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", email='" + email + '\'' +
+                ", gender='" + gender + '\'' +
                 '}';
     }
 }
