@@ -25,7 +25,7 @@ public class MyResource {
      * @return String that will be returned as a text/plain response.
      */
     @GET
-    @Produces({MediaType.TEXT_PLAIN })
+    @Produces(MediaType.TEXT_PLAIN )
     public String getIt() {
         return "Got it MAN!";
     }
@@ -61,14 +61,14 @@ catch (Exception e ){
 
 
     }
-    @Path("postpostman")
+/*    @Path("postpostman")
       @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     public Response postDBPostman(User user){
         UserDao userDao = new UserDao();
         userDao.getConnection(user);
         return Response.ok().entity(user).build();
-    }
+    }*/
 }
 
 
